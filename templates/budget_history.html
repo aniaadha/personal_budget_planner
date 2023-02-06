@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+
+<div id="header">Budget History</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-4"><img id="text" src="/static/coins.jpg" width="500" height="450"></div>
+      <div class="col-8">
+        <div id="text">
+        Choose the name of your previous budget and view its shorter form.
+        <form action="/report_budget" method="POST">
+            <select name="budget">
+                <option disabled selected value="">Choose Budget</option>
+                {%for budget in budgets%}
+
+                    <option value="{{budget["budget_name"]}}">{{budget["budget_name"]}}</option>
+                    {% endfor %}
+            </select>
+            <input type="submit" value="      View     ">
+
+        </form>
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

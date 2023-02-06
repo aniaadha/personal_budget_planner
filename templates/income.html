@@ -1,0 +1,79 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Income
+{% endblock %}
+
+{% block main %}
+
+    <form action="/income" method="post">
+        <table class="table table-striped">
+            <thead scope="col">
+                <tr>
+                    <th scope="col">Income per month</th>
+                    <th scope="col">Projected Amount</th>
+                    <th scope="col">Actual Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Salary</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="salary" name="salary" placeholder="0.00" type="number" min="0">
+
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="asalary" name="asalary" placeholder="0.00" type="number" min="0">
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Allowances</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="allowances" name="allowances" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="aallowances" name="aallowances" placeholder="0.00" type="number" min="0">
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Dividends</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="dividends" name="dividends" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="adividends" name="adividends" placeholder="0.00" type="number" min="0">
+
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="other" name="other" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="aother" name="aother" placeholder="0.00" type="number" min="0">
+
+                        </div>
+                    </td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+
+
+
+
+        <button class="btn btn-primary" type="submit">Submit</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,137 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    How to use
+{% endblock %}
+
+{% block main %}
+<div id="header">Budget Name: {{report_budget}}</div>
+<table class="table table-striped">
+  <thead id="category">
+    <tr>
+      <th>Income</th>
+      <td>Salary</td>
+      <td>Allowances</td>
+      <td>Dividends</td>
+      <td>Other</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {% for income in incomes %}
+      <th scope="row">Projected</th>
+      <td>{{income["salary"]}}</td>
+      <td>{{income["allowances"]}}</th>
+      <td>{{income["dividends"]}}</td>
+      <td>{{income["other"]}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      {% for aincome in aincomes %}
+      <th scope="row">Actual</th>
+      <td>{{aincome["asalary"]}}</td>
+      <td>{{aincome["aallowances"]}}</td>
+      <td>{{aincome["adividends"]}}</td>
+      <td>{{aincome["aother"]}}</td>
+      {% endfor %}
+    </tr>
+    </tbody>
+</table>
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Expenses</th>
+      <td>Groceries</td>
+      <td>Clothing</td>
+      <td>Fuel and car maintenance</td>
+      <td>Entertainment</td>
+      <td>Home supplies</td>
+      <td>Electricity</td>
+      <td>Gas</td>
+      <td>Water</td>
+      <td>Internet</td>
+      <td>Telephone</td>
+      <td>Other</td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      {% for expense in expenses %}
+      <th scope="row">Projected</th>
+      <td>{{expense["groceries"]}}</td>
+      <td>{{expense["health"]}}</td>
+      <td>{{expense["clothing"]}}</td>
+      <td>{{expense["fuel_car_maintenance"]}}</td>
+      <td>{{expense["entertainment"]}}</td>
+      <td>{{expense["home_supplies"]}}</td>
+      <td>{{expense["electricity"]}}</td>
+      <td>{{expense["gas"]}}</td>
+      <td>{{expense["water"]}}</td>
+      <td>{{expense["internet"]}}</td>
+      <td>{{expense["telephone"]}}</td>
+      <td>{{expense["other"]}}</td>
+      {% endfor %}
+    </tr>
+    <tr>
+      {% for aexpense in aexpenses %}
+      <th scope="row">Actual</th>
+      <td>{{aexpense["agroceries"]}}</td>
+      <td>{{aexpense["ahealth"]}}</td>
+      <td>{{aexpense["aclothing"]}}</td>
+      <td>{{aexpense["afuel_car_maintenance"]}}</td>
+      <td>{{aexpense["aentertainment"]}}</td>
+      <td>{{aexpense["ahome_supplies"]}}</td>
+      <td>{{aexpense["aelectricity"]}}</td>
+      <td>{{aexpense["agas"]}}</td>
+      <td>{{aexpense["awater"]}}</td>
+      <td>{{aexpense["ainternet"]}}</td>
+      <td>{{aexpense["atelephone"]}}</td>
+      <td>{{aexpense["aother"]}}</td>
+      {% endfor %}
+    </tr>
+    </tbody>
+</table>
+
+
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Projected</th>
+        <th scope="col">Actual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Total Income</th>
+        <td>{{total_income}}</td>
+        <td>{{atotal_income}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Total Expenses</th>
+        <td>{{total_expenses}}</td>
+        <td>{{atotal_expenses}}</td>
+      </tr>
+      <tr id="balance">
+        <th scope="row">Balance</th>
+        <td colspan="1"><b>{{projected_balance}}</b></td>
+        <td><b>{{actual_balance}}</b></td>
+      </tr>
+      <th scope="row""></th>
+      <td colspan="1"></td>
+        <td>{{alert}}</td>
+    </tbody>
+  </table>
+
+
+Your highest expense category is <b>{{max_exp}}</b>. It amounts <b>{{max_val}}</b></br>.
+
+
+
+
+
+
+{% endblock %}

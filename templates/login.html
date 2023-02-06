@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Get started
+{% endblock %}
+
+{% block main %}
+<div id="header">Welcome to Personal Budget Planner!</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-4"><img id="text" src="/static/coins.jpg" width="600" height="550" style="max-width:100%;height:auto;"></div>
+      <div class="col-7">
+        <div id="text"><p>
+            Want to budget smartly?</br>
+            Don't know where your money goes?</br>
+            Don't know how to control your spending?</br>
+            This is the right app for you.</br>
+        </p>
+        <form id="form" action="/login" method="post">
+            <div class="mb-3">
+                <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+            </div>
+            <button class="btn btn-secondary" type="submit">Log In</button>
+        </form>
+
+
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+
+{% endblock %}

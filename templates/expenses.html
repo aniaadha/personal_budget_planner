@@ -1,0 +1,159 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Expenses
+{% endblock %}
+
+{% block main %}
+
+    <form action="/summary" method="post">
+        <table class="table table-striped">
+            <thead scope="col">
+                <tr>
+                    <th scope="col">Expenses per month</th>
+                    <th scope="col">Projected Amount</th>
+                    <th scope="col">Actual Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Groceries</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="groceries" name="groceries" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="agroceries" name="agroceries" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Health</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="health" name="health" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="ahealth" name="ahealth" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Clothing</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="clothing" name="clothing" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="aclothing" name="aclothing" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Fuel & car maintenance</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="fuel_car_maintenance" name="fuel_car_maintenance" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="afuel_car_maintenance" name="afuel_car_maintenance" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Entertainment</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="entertainment" name="entertainment" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="aentertainment" name="aentertainment" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Home supplies</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="home_supplies" name="home_supplies" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="ahome_supplies" name="ahome_supplies" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Electricity</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="electricity" name="electricity" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="aelectricity" name="aelectricity" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gas</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="gas" name="gas" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="agas" name="agas" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Water</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="water" name="water" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="awater" name="awater" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Internet</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="internet" name="internet" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="ainternet" name="ainternet" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Telephone</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="telephone" name="telephone" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="atelephone" name="atelephone" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Other</td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="other" name="other" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                    <td><div class="mb-3">
+                        <input autocomplete="on" autofocus class="form-control mx-auto w-auto" id="aother" name="aother" placeholder="0.00" type="number" min="0">
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+
+        </table>
+        <button class="btn btn-primary" type="submit" >Submit</button>
+
+
+    </form>
+{% endblock %}

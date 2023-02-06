@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+
+{% endblock %}
+
+{% block main %}
+
+
+<div id="header">Your Budget Summary</br>{{budget_name}}</div>
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Projected</th>
+        <th scope="col">Actual</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">Income</th>
+        <td>{{total_income}}</td>
+        <td>{{atotal_income}}</td>
+      </tr>
+      <tr>
+        <th scope="row">Expenses</th>
+        <td>{{total_expenses}}</td>
+        <td>{{atotal_expenses}}</td>
+      </tr>
+      <tr id="balance">
+        <th scope="row">Balance</th>
+        <td colspan="1"><b>{{projected_balance}}</b></td>
+        <td><b>{{actual_balance}}</b></td>
+      </tr>
+      <th scope="row""></th>
+      <td colspan="1"></td>
+        <td>{{alert}}</td>
+    </tbody>
+  </table>
+
+
+<div>Your highest expense category is <b>{{max_exp}}</b>. It amounts <b>{{max_val}}</b></br>
+Compare your expense categories:</div>
+
+  
+<div><img src="/pie_plot.png" alt="pie_plot"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+
+
+
