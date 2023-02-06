@@ -1,0 +1,76 @@
+body {
+    font-size: 1.3rem;
+
+}
+
+th {
+    color: #16196b;
+    font-size: 1.5rem;
+}
+
+td {
+    font-size: 1.3rem;
+}
+
+#balance {
+    background-color: #f2d9e6;
+}
+
+#header {
+    background-color: purple;
+    font-size: 2rem;
+    font-family: Helvetica;
+    color: white;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0rem;
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center;
+}
+form {
+    margin: 2rem;
+
+}
+#text{
+    padding: 1rem 2rem 1rem 2rem;
+    text-align: left, justify;
+}
+#headline {
+    background-color: white;
+    font-size: 4rem;
+    color: purple;
+    font-weight: 800;
+    line-height: 1;
+    margin: 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    text-align: center;
+
+}
+.nav-item {
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+#log {
+    padding-left: 30rem;
+
+}
+
+
+.navbar-nav ms-auto mt-2 {
+
+}
+#menu {
+    margin-left: 10rem;
+}
+
+input[type="text"] {
+    display: block;
+    width: 300%;
+ }
+
+ @media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
+
